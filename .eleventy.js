@@ -4,6 +4,8 @@ module.exports = function (config) {
     dir: {
       input: "src",
       output: "public",
+      includes: "_includes",
+      layouts: "_layouts",
     },
   };
   };
