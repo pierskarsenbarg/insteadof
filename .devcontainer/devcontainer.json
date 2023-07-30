@@ -1,5 +1,12 @@
 {
   "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
   "features": {
-  }
+},
+"customizations": {
+	"vscode": {
+		"extensions": [
+			"ronnidc.nunjucks"
+		]
+	}
+}
 }
