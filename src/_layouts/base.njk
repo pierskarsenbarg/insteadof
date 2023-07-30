@@ -5,14 +5,21 @@ title: My default title
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Instead of Kubernetes | {{ title }}</title>
+  <title>{{ site.name }}{% if title %} - {{title}}{% endif %}</title>
   <link href="/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}">
+  <meta name="description" content="
+  {% if description %} 
+    {{description}}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+  " />
 </head>
 <body>
   <main>
     {{ content | safe }}
-    <hr />
-    <small>&copy; {{site.copyrightYear}}</small>
+    {% include "partials/footer.njk" %} 
   </main>
 </body>
 </html>
