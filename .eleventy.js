@@ -6,6 +6,7 @@ module.exports = function (config) {
       output: "public",
       includes: "_includes",
       layouts: "_layouts",
+      data: "_data"
     },
   };
   };
